@@ -1,0 +1,15 @@
+# =============================================================================
+# msv_config.yaml
+#
+# Centralized YAML file for design parameters. Parameter, value pairs are
+# generated into a parameters package (msv_params_pkg.sv) with the provided
+# script: scripts/gen_param_pkg.py .
+# =============================================================================
+
+msv:
+  ce:
+    core:
+      num_warps: 1
+      num_lanes: 4
+    
+
