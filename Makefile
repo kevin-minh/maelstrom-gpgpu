@@ -57,8 +57,12 @@ msg_params_pkg.sv:
 %.sim: %.check msg_params_pkg.sv FORCE
 	@mkdir -p $(SIM_DIR)/$*
 	@mkdir -p $(REPORTS_DIR)/$*
-	@$(SIM) -f $(SIM_OPTS) --Mdir $(SIM_DIR)/$* -f $(TB_DIR)/$*/$*.f > $(SIM_DIR)/$*/$(SIM).log
-	@$(SIM_DIR)/$*/V$* > $(REPORTS_DIR)/$*/$(SIM).log
+	@printf "[INFO] Compiling \"$*\"...\r"
+	@$(SIM) -f $(SIM_OPTS) --Mdir $(SIM_DIR)/$* -f $(TB_DIR)/$*/$*.f > $(SIM_DIR)/$*/$(SIM).log 2> $(SIM_DIR)/$*/err.log
+	@python3 $(SCRIPTS_DIR)/parse_verilator_logs.py $*
+	@printf "[INFO] Simulating \"$*\"...\r"
+	@$(SIM_DIR)/$*/V$* > $(REPORTS_DIR)/$*/$(SIM).out
+	@printf "[INFO] Simulating \"$*\"...\n"
 
 # =============================================================================
 # Cleanup

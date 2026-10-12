@@ -26,7 +26,7 @@ def generate_sv_package(yaml_path, output_sv_path):
     pkg_contents = f"""// ============================================================================
 // msg_params_pkg.sv
 //
-// @desc Global Design Parameter Definitions from 'inputs/msg_params.yaml'
+// @desc Global Design Parameter Definitions from 'inputs/msg_params.yaml' (DO NOT MODIFY MANUALLY)
 // See scripts/gen_param_pkg.py and make %.params
 //
 // Generated {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}
