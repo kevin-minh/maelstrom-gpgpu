@@ -21,7 +21,7 @@ def generate_sv_package(yaml_path, output_sv_path):
     with open(yaml_path, 'r') as f:
         params = yaml.safe_load(f)
     
-    param_names = extract_leaf_pairs(params['msv'])
+    param_names = extract_leaf_pairs(params['msg'])
 
     pkg_contents = f"""// ============================================================================
 // msg_params_pkg.sv

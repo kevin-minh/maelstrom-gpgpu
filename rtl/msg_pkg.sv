@@ -72,13 +72,6 @@ package msg_pkg;
         logic [4:0] imm_lo;
       } s;
       struct packed {
-        logic [6:0] imm_hi;
-        areg_t      rs2;
-        areg_t      rs1;
-        funct3_t    funct3;
-        areg_t      imm_lo;
-      } s;
-      struct packed {
         logic [19:0] imm;
         areg_t       rd;
       } u;

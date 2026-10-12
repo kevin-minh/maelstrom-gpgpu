@@ -4,7 +4,7 @@
  * @desc Top-Level Maelstrom-GPGPU Module
  */
 
-module maelstrom-v (
+module maelstrom_gpgpu (
   ports
 );
   
