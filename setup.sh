@@ -20,6 +20,8 @@ export INPUTS_DIR="${PROJECT_ROOT}/inputs"
 # =============================================================================
 export SIM_DIR="${PROJECT_ROOT}/sim"
 export REPORTS_DIR="${PROJECT_ROOT}/reports"
+export SYNTH_DIR="${PROJECT_ROOT}/synth"
+export APR_DIR="${PROJECT_ROOT}/apr"
 
 # =============================================================================
 # Simulator
