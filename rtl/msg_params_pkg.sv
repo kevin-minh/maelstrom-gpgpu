@@ -4,7 +4,7 @@
 // @desc Global Design Parameter Definitions from 'inputs/msg_params.yaml'
 // See scripts/gen_param_pkg.py and make %.params
 //
-// Generated 2026-10-10 17:51
+// Generated 2026-10-11 19:27
 // ============================================================================
         
 `ifndef PARAMS_PKG

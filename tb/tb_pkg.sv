@@ -1,6 +1,8 @@
 /*
  * tb_pkg.sv
  *
+ * @desc Global Testbench Definitions
+ *
  * Author: Kevin Nguyen
  * Last Updated: 2026-10-04
  */

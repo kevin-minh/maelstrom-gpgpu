@@ -1,7 +1,7 @@
 /*
  * msv_ce_core.sv
  * 
- * @desc Compute Core SIMD Execution Unit
+ * @desc Compute Core Top-Level SIMD Execution Unit
  */
 
 /* verilator lint_off IMPORTSTAR */
@@ -18,7 +18,8 @@ module msg_ce_core #(
   input rst_ni,
 
   msg_ce_core_ctrl_if.core ctrl_if,
-  msg_ce_core_mmu_if.core  mmu_if
+  msg_ce_core_imem_if.core imem_if,
+  msg_ce_core_dmem_if.core dmem_if
 );
   
   // ==========================================================================

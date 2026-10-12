@@ -1,5 +1,7 @@
 /*
  * core_tb.sv
+ *
+ * @desc Core Testbench Top-Level
  */
 
 module core_tb;
@@ -13,18 +15,22 @@ module core_tb;
 
   logic rst_ni;
 
+  
+
   // ==========================================================================
   // Instantiations
   // ==========================================================================
 
   msg_ce_core_ctrl_if ctrl_if();
-  msg_ce_core_mmu_if  mmu_if();
+  msg_ce_core_imem_if imem_if();
+  msg_ce_core_dmem_if dmem_if();
 
   msg_ce_core dut (
     .clk_i   (clk_i),
     .rst_ni  (rst_ni),
     .ctrl_if (ctrl_if.ctrl),
-    .mmu_if  (mmu_if.mmu)
+    .imem_if (imem_if.imem),
+    .dmem_if (dmem_if.dmem)
   );
 
   // ==========================================================================
